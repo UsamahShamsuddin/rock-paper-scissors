@@ -52,7 +52,7 @@ let computerScore = 0;
 
 // plays 5 rounds with scorekeeping and reports a winner/loser at the end of best of 5
 
-function game() {
+/*function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Choose your weapon between rock, paper and scissors");
         let computerSelection = getComputerChoice();
@@ -74,4 +74,4 @@ function game() {
     } else {
         console.log("Draw game!")
     }
-}
+}*/
