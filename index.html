@@ -3,12 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Rock Paper & Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Rock Paper & Scissors</title>
 </head>
 
 <body>
-    <script src="index.js"></script>
+    <div class="container">
+        <header class="header">
+            <h1>Rock Paper Scissors</h1>
+            <button id="restart" class="restart-btn">Restart Game</button>
+            <div id="score" class="score">
+                <p>Player: 0</p>
+                <p>Computer: 0</p>
+            </div>
+        </header>
+        <h2>Make Your Selection</h2>
+        <div class="choices">
+            <p id="rock" class="choice rock">ROCK</p>
+            <p id="paper" class="choice paper">PAPER</p>
+            <p id="scissors" class="choice scissors">SCISSORS</p>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal">
+        <div id="result" class="modal-content">
+            <h1>You Win</h1>
+            <p class="rock">Computer Chose Rock</p>
+        </div>
+    </div>
 </body>
 
 </html>
