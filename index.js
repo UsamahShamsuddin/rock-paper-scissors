@@ -3,6 +3,7 @@ const score = document.getElementById("score");
 const result = document.getElementById("result");
 const restart = document.getElementById("restart");
 const modal = document.querySelector(".modal");
+const section = document.querySelector(".section");
 const scoreboard = {
     player: 0,
     computer: 0
@@ -84,10 +85,25 @@ function showWinner(winner, computerChoice) {
     `;
 
     modal.style.display = "block";
+    // Show winner out of 5 rounds
+    if (scoreboard.player === 5) {
+        result.innerHTML = `
+        <h1 class="text-win">You Won the Game</h1>
+        <p>Press Restart Game to Play Again</p>
+        `;
+        section.style.display = "none";
+    } else if (scoreboard.computer === 5) {
+        result.innerHTML = `
+        <h1 class="text-lose">You Lost the Game</h1>
+        <p>Press Restart Game to Play Again</p>
+        `;
+        section.style.display = "none";
+    }
 }
 
 // Restart game
 function restartGame() {
+    section.style.display = "block";
     scoreboard.player = 0;
     scoreboard.computer = 0;
     score.innerHTML = `
